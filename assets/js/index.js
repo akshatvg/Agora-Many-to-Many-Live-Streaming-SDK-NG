@@ -23,6 +23,7 @@ $(() => {
     $("#channel").val(options.channel);
     $("#join-form").submit();
   }
+  enableUiControls();
 })
 
 $("#host-join").click(function (e) {
@@ -63,6 +64,8 @@ async function join() {
   // join the channel
   options.uid = await client.join(options.appid, options.channel, options.token || null);
   if (options.role === "host") {
+    $('#mic-btn').prop('disabled', false);
+    $('#video-btn').prop('disabled', false);
     // create local audio and video tracks
     localTracks.audioTrack = await AgoraRTC.createMicrophoneAudioTrack();
     localTracks.videoTrack = await AgoraRTC.createCameraVideoTrack();
@@ -81,6 +84,8 @@ async function leave() {
     if (track) {
       track.stop();
       track.close();
+      $('#mic-btn').prop('disabled', true);
+      $('#video-btn').prop('disabled', true);
       localTracks[trackName] = undefined;
     }
   }
@@ -126,4 +131,36 @@ function handleUserUnpublished(user) {
   const id = user.uid;
   delete remoteUsers[id];
   $(`#player-wrapper-${id}`).remove();
+}
+
+// Action buttons
+function enableUiControls() {
+  $("#mic-btn").prop("disabled", false);
+  $("#video-btn").prop("disabled", false);
+  $("#mic-btn").click(function () {
+    toggleMic();
+  });
+  $("#video-btn").click(function () {
+    toggleVideo();
+  });
+}
+
+// Toggle Mic
+function toggleMic() {
+  $("#mic-icon").toggleClass('fa-microphone').toggleClass('fa-microphone-slash');
+  if ($("#mic-icon").hasClass('fa-microphone')) {
+    localTracks.audioTrack.setEnabled(false);
+  } else {
+    localTracks.audioTrack.setEnabled(true);
+  }
+}
+
+// Toggle Video
+function toggleVideo() {
+  if ($("#video-icon").hasClass('fa-video')) {
+    localTracks.videoTrack.setEnabled(false);
+  } else {
+    localTracks.videoTrack.setEnabled(true);
+  }
+  $("#video-icon").toggleClass('fa-video').toggleClass('fa-video-slash');
 }

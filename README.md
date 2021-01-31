@@ -1,33 +1,35 @@
-# Repo Name
+# Agora Many to Many Live Broadcast NG SDK
 
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/akshatvg/<Repo>?logo=github&style=social)](https://github.com/akshatvg/) [![GitHub last commit](https://img.shields.io/github/last-commit/akshatvg/<Repo>?style=social&logo=git)](https://github.com/akshatvg/) [![GitHub stars](https://img.shields.io/github/stars/akshatvg/<Repo>?style=social)](https://github.com/akshatvg/<Repo>/stargazers) [![GitHub forks](https://img.shields.io/github/forks/akshatvg/<Repo>?style=social&logo=git)](https://github.com/akshatvg/<Repo>/network)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?logo=github&style=social)](https://github.com/akshatvg/) [![GitHub last commit](https://img.shields.io/github/last-commit/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/) [![GitHub stars](https://img.shields.io/github/stars/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/stargazers) [![GitHub forks](https://img.shields.io/github/forks/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/network)
 
-Project description comes here.
+Many to many, live video broadcast using the Agora Web NG SDK.
 
 <p align="center">
-<a href="#!">
-<img src="https://github.com/akshatvg/<Repo>/blob/master/Assets/app-icon-64%402x.png" width="120px" height="120px" alt="<Repo> Logo"/>
+<a href="https://rtm.akshatvg.com">
+<img src="assets/img/logo.png" width="200px" alt="Agora Logo"/>
 </a>
 </p>
 
-![Generic badge](https://img.shields.io/badge/Random-Swag-orange) 
+![Generic badge](https://img.shields.io/badge/Live-Broadcast-orange) 
 
-#### Link for [demo](#!) 
-[![Generic badge](https://img.shields.io/badge/view-demo-orange)](#!)
+#### Link for [demo](https://m2m-live.akshatvg.com) 
+[![Generic badge](https://img.shields.io/badge/view-demo-orange)](https://m2m-live.akshatvg.com)
 
 ## Useful Links
 
-- [Actual Website](#!)
+- [Deployed Website](https://m2m-live.akshatvg.com)
+- [Agora.io Website](https://www.agora.io/)
+- [NG SDK Documentation](https://agoraio-community.github.io/AgoraWebSDK-NG/api/en/index.html)
 
 ## Requirements
 
-[![GitHub top language](https://img.shields.io/github/languages/top/akshatvg/<Repo>?logo=javascript&style=social)](https://github.com/akshatvg/)
+[![GitHub top language](https://img.shields.io/github/languages/top/akshatvg/Agora-RTM-Web?logo=html&style=social)](https://github.com/akshatvg/)
 
-The source code of this project is written in **`HTML/CSS/JS`**. So, you do not require anything extra to run this project.
+The source code of this project is written in **`HTML`, `CSS`, `JavaScript` and the `Agora NG SDK`**. So, you would require the Agora NG SDK and a valid App Id to run this project.
 
 ## Instructions
 
-[![chrome](https://img.shields.io/badge/Open-index.html-lightgrey.svg?logo=google-chrome&style=popout&logoColor=red)](#!)
+[![chrome](https://img.shields.io/badge/Open-index.html-lightgrey.svg?logo=google-chrome&style=popout&logoColor=red)](https://m2m-live.akshatvg.com)
 
 Extract the folder and run `index.html`
 
@@ -78,9 +80,9 @@ ______      _               _   _               _
 
 ## License
 
-**MIT &copy; [Akshat Gupta](https://github.com/akshatvg/<Repo>/blob/master/LICENSE)**
+**MIT &copy; [Akshat Gupta](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/blob/master/LICENSE)**
 
-[![GitHub license](https://img.shields.io/github/license/akshatvg/<Repo>?style=social&logo=github)](https://github.com/akshatvg/<Repo>/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/akshatvg?style=social)](https://twitter.com/akshatvg)
+[![GitHub license](https://img.shields.io/github/license/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=github)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/akshatvg?style=social)](https://twitter.com/akshatvg)
 
 ---------
 

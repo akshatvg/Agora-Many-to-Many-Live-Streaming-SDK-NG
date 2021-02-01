@@ -56,6 +56,8 @@ $("#leave").click(function (e) {
 async function join() {
   // create Agora client
   client.setClientRole(options.role);
+  $("#mic-btn").prop("disabled", false);
+  $("#video-btn").prop("disabled", false);
   if (options.role === "audience") {
     // add event listener to play remote tracks when remote user publishs.
     client.on("user-published", handleUserPublished);
@@ -135,8 +137,6 @@ function handleUserUnpublished(user) {
 
 // Action buttons
 function enableUiControls() {
-  $("#mic-btn").prop("disabled", false);
-  $("#video-btn").prop("disabled", false);
   $("#mic-btn").click(function () {
     toggleMic();
   });
@@ -147,20 +147,24 @@ function enableUiControls() {
 
 // Toggle Mic
 function toggleMic() {
-  $("#mic-icon").toggleClass('fa-microphone').toggleClass('fa-microphone-slash');
   if ($("#mic-icon").hasClass('fa-microphone')) {
     localTracks.audioTrack.setEnabled(false);
+    console.log("Audio Muted.");
   } else {
     localTracks.audioTrack.setEnabled(true);
+    console.log("Audio Unmuted.");
   }
+  $("#mic-icon").toggleClass('fa-microphone').toggleClass('fa-microphone-slash');
 }
 
 // Toggle Video
 function toggleVideo() {
   if ($("#video-icon").hasClass('fa-video')) {
     localTracks.videoTrack.setEnabled(false);
+    console.log("Video Muted.");
   } else {
     localTracks.videoTrack.setEnabled(true);
+    console.log("Video Unmuted.");
   }
   $("#video-icon").toggleClass('fa-video').toggleClass('fa-video-slash');
 }

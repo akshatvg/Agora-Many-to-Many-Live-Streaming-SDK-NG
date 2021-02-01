@@ -20,6 +20,7 @@ Many to many, live video broadcast using the Agora Web SDK NG.
 - [Deployed Website](https://m2m-live.akshatvg.com)
 - [Agora.io Website](https://www.agora.io/)
 - [SDK NG Documentation](https://agoraio-community.github.io/AgoraWebSDK-NG/api/en/index.html)
+- [Guided Blog](https://akshatvg.medium.com/agora-many-to-many-live-broadcast-sdk-ng-d0d7ec7a4735?source=friends_link&sk=b52dfeef3d7e28b76fdcfbdde3f1ac12)
 
 ## Requirements
 

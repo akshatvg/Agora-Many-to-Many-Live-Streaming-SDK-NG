@@ -1,8 +1,8 @@
-# Agora Many to Many Live Broadcast NG SDK
+# Agora Many to Many Live Broadcast SDK NG
 
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?logo=github&style=social)](https://github.com/akshatvg/) [![GitHub last commit](https://img.shields.io/github/last-commit/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/) [![GitHub stars](https://img.shields.io/github/stars/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/stargazers) [![GitHub forks](https://img.shields.io/github/forks/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/network)
 
-Many to many, live video broadcast using the Agora Web NG SDK.
+Many to many, live video broadcast using the Agora Web SDK NG.
 
 <p align="center">
 <a href="https://rtm.akshatvg.com">
@@ -19,13 +19,13 @@ Many to many, live video broadcast using the Agora Web NG SDK.
 
 - [Deployed Website](https://m2m-live.akshatvg.com)
 - [Agora.io Website](https://www.agora.io/)
-- [NG SDK Documentation](https://agoraio-community.github.io/AgoraWebSDK-NG/api/en/index.html)
+- [SDK NG Documentation](https://agoraio-community.github.io/AgoraWebSDK-NG/api/en/index.html)
 
 ## Requirements
 
 [![GitHub top language](https://img.shields.io/github/languages/top/akshatvg/Agora-RTM-Web?logo=html&style=social)](https://github.com/akshatvg/)
 
-The source code of this project is written in **`HTML`, `CSS`, `JavaScript` and the `Agora NG SDK`**. So, you would require the Agora NG SDK and a valid App Id to run this project.
+The source code of this project is written in **`HTML`, `CSS`, `JavaScript` and the `Agora SDK NG`**. So, you would require the Agora SDK NG and a valid App Id to run this project.
 
 ## Instructions
 

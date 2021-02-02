@@ -5,7 +5,7 @@
 Many to many, live video broadcast using the Agora Web SDK NG.
 
 <p align="center">
-<a href="https://rtm.akshatvg.com">
+<a href="https://m2m-live.akshatvg.com">
 <img src="assets/img/logo.png" width="200px" alt="Agora Logo"/>
 </a>
 </p>

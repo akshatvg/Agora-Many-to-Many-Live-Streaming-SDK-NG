@@ -27,7 +27,7 @@ $(() => {
 })
 
 $("#host-join").click(function (e) {
-  options.role = "host"
+  options.role = "host";
 })
 
 $("#audience-join").click(function (e) {

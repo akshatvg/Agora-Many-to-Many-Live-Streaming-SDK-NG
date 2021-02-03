@@ -31,7 +31,7 @@ $("#host-join").click(function (e) {
 })
 
 $("#audience-join").click(function (e) {
-  options.role = "audience"
+  options.role = "audience";
 })
 
 $("#join-form").submit(async function (e) {
@@ -59,6 +59,8 @@ async function join() {
   $("#mic-btn").prop("disabled", false);
   $("#video-btn").prop("disabled", false);
   if (options.role === "audience") {
+    $("#mic-btn").prop("disabled", true);
+    $("#video-btn").prop("disabled", true);
     // add event listener to play remote tracks when remote user publishs.
     client.on("user-published", handleUserPublished);
     client.on("user-unpublished", handleUserUnpublished);

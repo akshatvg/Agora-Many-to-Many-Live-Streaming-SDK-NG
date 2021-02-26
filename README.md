@@ -1,8 +1,8 @@
-# Agora Many to Many Live Broadcast SDK NG
+# Agora Many to Many Live Streaming SDK NG
 
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?logo=github&style=social)](https://github.com/akshatvg/) [![GitHub last commit](https://img.shields.io/github/last-commit/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/) [![GitHub stars](https://img.shields.io/github/stars/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/stargazers) [![GitHub forks](https://img.shields.io/github/forks/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/network)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK?logo=github&style=social)](https://github.com/akshatvg/) [![GitHub last commit](https://img.shields.io/github/last-commit/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/) [![GitHub stars](https://img.shields.io/github/stars/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK?style=social)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK/stargazers) [![GitHub forks](https://img.shields.io/github/forks/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK?style=social&logo=git)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK/network)
 
-Many to many, live video broadcast using the Agora Web SDK NG.
+Many to many, live video streaming using the Agora Web SDK NG.
 
 <p align="center">
 <a href="https://m2m-live.akshatvg.com">
@@ -10,7 +10,7 @@ Many to many, live video broadcast using the Agora Web SDK NG.
 </a>
 </p>
 
-![Generic badge](https://img.shields.io/badge/Live-Broadcast-orange) 
+![Generic badge](https://img.shields.io/badge/Live-Streaming-orange) 
 
 #### Link for [demo](https://m2m-live.akshatvg.com) 
 [![Generic badge](https://img.shields.io/badge/view-demo-orange)](https://m2m-live.akshatvg.com)
@@ -20,7 +20,7 @@ Many to many, live video broadcast using the Agora Web SDK NG.
 - [Deployed Website](https://m2m-live.akshatvg.com)
 - [Agora.io Website](https://www.agora.io/)
 - [SDK NG Documentation](https://agoraio-community.github.io/AgoraWebSDK-NG/api/en/index.html)
-- [Guided Blog](https://akshatvg.medium.com/agora-many-to-many-live-broadcast-sdk-ng-d0d7ec7a4735?source=friends_link&sk=b52dfeef3d7e28b76fdcfbdde3f1ac12)
+- [Guided Blog](https://akshatvg.medium.com/agora-many-to-many-live-streaming-sdk-ng-d0d7ec7a4735?source=friends_link&sk=b52dfeef3d7e28b76fdcfbdde3f1ac12)
 
 ## Requirements
 
@@ -81,9 +81,9 @@ ______      _               _   _               _
 
 ## License
 
-**MIT &copy; [Akshat Gupta](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/blob/master/LICENSE)**
+**MIT &copy; [Akshat Gupta](https://github.com/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK/blob/master/LICENSE)**
 
-[![GitHub license](https://img.shields.io/github/license/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK?style=social&logo=github)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Broadcast-NG-SDK/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/akshatvg?style=social)](https://twitter.com/akshatvg)
+[![GitHub license](https://img.shields.io/github/license/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK?style=social&logo=github)](https://github.com/akshatvg/Agora-Many-to-Many-Live-Streaming-NG-SDK/blob/master/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/akshatvg?style=social)](https://twitter.com/akshatvg)
 
 ---------
 

@@ -14,18 +14,6 @@ var options = {
   role: "audience" // host or audience
 };
 
-// the demo can auto join channel with params in url
-$(() => {
-  var urlParams = new URL(location.href).searchParams;
-  options.appid = "a6af85f840ef43108491705e2315a857";
-  options.channel = urlParams.get("channel");
-  if (options.appid && options.channel) {
-    $("#channel").val(options.channel);
-    $("#join-form").submit();
-  }
-  enableUiControls();
-})
-
 $("#host-join").click(function (e) {
   options.role = "host";
 })

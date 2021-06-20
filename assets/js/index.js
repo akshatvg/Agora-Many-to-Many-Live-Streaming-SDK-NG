@@ -1,9 +1,16 @@
 // create Agora client
-var client = AgoraRTC.createClient({ mode: "live", codec: "vp8" });
+var client = AgoraRTC.createClient({
+  mode: "live",
+  codec: "vp8"
+});
 var localTracks = {
   videoTrack: null,
   audioTrack: null
 };
+var localTrackState = {
+  videoTrackEnabled: true,
+  audioTrackEnabled: true
+}
 var remoteUsers = {};
 // Agora client options
 var options = {
@@ -61,6 +68,7 @@ async function join() {
     // create local audio and video tracks
     localTracks.audioTrack = await AgoraRTC.createMicrophoneAudioTrack();
     localTracks.videoTrack = await AgoraRTC.createCameraVideoTrack();
+    showMuteButton();
     // play local video track
     localTracks.videoTrack.play("local-player");
     $("#local-player-name").text(`localTrack(${options.uid})`);
@@ -76,8 +84,7 @@ async function leave() {
     if (track) {
       track.stop();
       track.close();
-      $('#mic-btn').prop('disabled', true);
-      $('#video-btn').prop('disabled', true);
+     c
       localTracks[trackName] = undefined;
     }
   }
@@ -90,6 +97,7 @@ async function leave() {
   $("#host-join").attr("disabled", false);
   $("#audience-join").attr("disabled", false);
   $("#leave").attr("disabled", true);
+  hideMuteButton();
   console.log("Client successfully left channel.");
 }
 
@@ -113,48 +121,78 @@ async function subscribe(user, mediaType) {
   }
 }
 
+// Handle user published
 function handleUserPublished(user, mediaType) {
   const id = user.uid;
   remoteUsers[id] = user;
   subscribe(user, mediaType);
 }
 
+// Handle user unpublished
 function handleUserUnpublished(user) {
   const id = user.uid;
   delete remoteUsers[id];
   $(`#player-wrapper-${id}`).remove();
 }
 
-// Action buttons
-function enableUiControls() {
-  $("#mic-btn").click(function () {
-    toggleMic();
-  });
-  $("#video-btn").click(function () {
-    toggleVideo();
-  });
+// Mute audio click
+$("#mic-btn").click(function (e) {
+  if (localTrackState.audioTrackEnabled) {
+    muteAudio();
+  } else {
+    unmuteAudio();
+  }
+});
+
+// Mute video click
+$("#video-btn").click(function (e) {
+  if (localTrackState.videoTrackEnabled) {
+    muteVideo();
+  } else {
+    unmuteVideo();
+  }
+})
+
+// Hide mute buttons
+function hideMuteButton() {
+  $("#video-btn").css("display", "none");
+  $("#mic-btn").css("display", "none");
 }
 
-// Toggle Mic
-function toggleMic() {
-  if ($("#mic-icon").hasClass('fa-microphone')) {
-    localTracks.audioTrack.setEnabled(false);
-    console.log("Audio Muted.");
-  } else {
-    localTracks.audioTrack.setEnabled(true);
-    console.log("Audio Unmuted.");
-  }
-  $("#mic-icon").toggleClass('fa-microphone').toggleClass('fa-microphone-slash');
+// Show mute buttons
+function showMuteButton() {
+  $("#video-btn").css("display", "inline-block");
+  $("#mic-btn").css("display", "inline-block");
 }
 
-// Toggle Video
-function toggleVideo() {
-  if ($("#video-icon").hasClass('fa-video')) {
-    localTracks.videoTrack.setEnabled(false);
-    console.log("Video Muted.");
-  } else {
-    localTracks.videoTrack.setEnabled(true);
-    console.log("Video Unmuted.");
-  }
-  $("#video-icon").toggleClass('fa-video').toggleClass('fa-video-slash');
+// Mute audio function
+async function muteAudio() {
+  if (!localTracks.audioTrack) return;
+  await localTracks.audioTrack.setEnabled(false);
+  localTrackState.audioTrackEnabled = false;
+  $("#mic-btn").text("Unmute Audio");
+}
+
+// Mute video function
+async function muteVideo() {
+  if (!localTracks.videoTrack) return;
+  await localTracks.videoTrack.setEnabled(false);
+  localTrackState.videoTrackEnabled = false;
+  $("#video-btn").text("Unmute Video");
+}
+
+// Unmute audio function
+async function unmuteAudio() {
+  if (!localTracks.audioTrack) return;
+  await localTracks.audioTrack.setEnabled(true);
+  localTrackState.audioTrackEnabled = true;
+  $("#mic-btn").text("Mute Audio");
+}
+
+// Unmute video function
+async function unmuteVideo() {
+  if (!localTracks.videoTrack) return;
+  await localTracks.videoTrack.setEnabled(true);
+  localTrackState.videoTrackEnabled = true;
+  $("#video-btn").text("Mute Video");
 }

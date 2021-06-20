@@ -58,7 +58,7 @@ async function join() {
     $("#video-btn").prop("disabled", true);
     // add event listener to play remote tracks when remote user publishs.
     client.on("user-published", handleUserPublished);
-    client.on("user-unpublished", handleUserUnpublished);
+    client.on("user-left", handleUserLeft);
   }
   // join the channel
   options.uid = await client.join(options.appid, options.channel, options.token || null);
@@ -84,7 +84,8 @@ async function leave() {
     if (track) {
       track.stop();
       track.close();
-     c
+      $('#mic-btn').prop('disabled', true);
+      $('#video-btn').prop('disabled', true);
       localTracks[trackName] = undefined;
     }
   }
@@ -129,7 +130,7 @@ function handleUserPublished(user, mediaType) {
 }
 
 // Handle user unpublished
-function handleUserUnpublished(user) {
+function handleUserLeft(user) {
   const id = user.uid;
   delete remoteUsers[id];
   $(`#player-wrapper-${id}`).remove();

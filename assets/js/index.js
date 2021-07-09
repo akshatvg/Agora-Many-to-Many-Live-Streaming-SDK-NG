@@ -58,6 +58,7 @@ async function join() {
     $("#video-btn").prop("disabled", true);
     // add event listener to play remote tracks when remote user publishs.
     client.on("user-published", handleUserPublished);
+    client.on("user-joined", handleUserJoined);
     client.on("user-left", handleUserLeft);
   }
   // join the channel
@@ -65,6 +66,9 @@ async function join() {
   if (options.role === "host") {
     $('#mic-btn').prop('disabled', false);
     $('#video-btn').prop('disabled', false);
+    client.on("user-published", handleUserPublished);
+    client.on("user-joined", handleUserJoined);
+    client.on("user-left", handleUserLeft);
     // create local audio and video tracks
     localTracks.audioTrack = await AgoraRTC.createMicrophoneAudioTrack();
     localTracks.videoTrack = await AgoraRTC.createCameraVideoTrack();
@@ -129,7 +133,14 @@ function handleUserPublished(user, mediaType) {
   subscribe(user, mediaType);
 }
 
-// Handle user unpublished
+// Handle user joined
+function handleUserJoined(user, mediaType) {
+  const id = user.uid;
+  remoteUsers[id] = user;
+  subscribe(user, mediaType);
+}
+
+// Handle user left
 function handleUserLeft(user) {
   const id = user.uid;
   delete remoteUsers[id];

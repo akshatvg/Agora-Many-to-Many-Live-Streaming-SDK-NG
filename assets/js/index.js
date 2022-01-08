@@ -14,7 +14,7 @@ var localTrackState = {
 var remoteUsers = {};
 // Agora client options
 var options = {
-  appid: "a6af85f840ef43108491705e2315a857",
+  appid: null,
   channel: null,
   uid: null,
   token: null,
@@ -34,7 +34,7 @@ $("#join-form").submit(async function (e) {
   $("#host-join").attr("disabled", true);
   $("#audience-join").attr("disabled", true);
   try {
-    options.appid = "a6af85f840ef43108491705e2315a857";
+    options.appid = $("#appid").val();
     options.channel = $("#channel").val();
     await join();
   } catch (error) {
